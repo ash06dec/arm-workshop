@@ -2,22 +2,36 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "StorageAccount" : {
+        "StorageAccountPrefix": {
             "type": "string",
             "metadata": {
-                "description" : "Enter the storage account name"
+                "description": "Enter the Prefix storage account name"
+            }
+        },
+        "accountType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Premium_LRS",
+                "Standard_RAGRS"
+            ],
+            "metadata": {
+                "description": "SKU_TYPE"
             }
         }
     },
-    "variables": {},
+    "variables": {
+        "StorageAccount":"[toLower(concat(parameters('StorageAccountPrefix'),uniqueString(resourceGroup().id)))]"
+    },
+
     "resources": [
         {
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2015-06-15",
-            "name": "[parameter(StorageAccount)]",
+            "name": "[variables('StorageAccount')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": "[parameter(StorageAccount)]"
+                "displayName": "[variables('StorageAccount')]"
             },
             "properties": {
                 "accountType": "Standard_LRS"
