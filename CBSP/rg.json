@@ -1,0 +1,1157 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "servers_opsip01sqlsrv_name": {
+            "defaultValue": "opsip01sqlsrv",
+            "type": "String"
+        },
+        "vaults_opsi_p_01_kv_name": {
+            "defaultValue": "opsi-p-01-kv",
+            "type": "String"
+        },
+        "vaults_opsi_cbsp_p_01_kv_name": {
+            "defaultValue": "opsi-cbsp-p-01-kv",
+            "type": "String"
+        },
+        "advisors_DropIndex_name": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "keys_ServiceManaged_name": {
+            "defaultValue": "ServiceManaged",
+            "type": "String"
+        },
+        "storageAccounts_opsip01saerkow4ll4tb44_name": {
+            "defaultValue": "opsip01saerkow4ll4tb44",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "databases_opsip01sqldb_name": {
+            "defaultValue": "opsip01sqldb",
+            "type": "String"
+        },
+        "advisors_DefragmentIndex_name": {
+            "defaultValue": "DefragmentIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "secrets_opsi_p_01_sp_Pwd_name": {
+            "defaultValue": "opsi-p-01-sp-Pwd",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "encryptionProtector_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "firewallRules_AllowABNGuestWifi_name": {
+            "defaultValue": "AllowABNGuestWifi",
+            "type": "String"
+        },
+        "secrets_opsi_p_01_sp_objectid_name": {
+            "defaultValue": "opsi-p-01-sp-objectid",
+            "type": "String"
+        },
+        "secrets_vsts_opsi_p_01_sp_Pwd_name": {
+            "defaultValue": "vsts-opsi-p-01-sp-Pwd",
+            "type": "String"
+        },
+        "firewallRules_AllowPublicABNSpace_name": {
+            "defaultValue": "AllowPublicABNSpace",
+            "type": "String"
+        },
+        "secrets_opsi_p_01_sp_Certificate_name": {
+            "defaultValue": "opsi-p-01-sp-Certificate",
+            "type": "String"
+        },
+        "firewallRules_AllowExpressRouteNAT1_name": {
+            "defaultValue": "AllowExpressRouteNAT1",
+            "type": "String"
+        },
+        "firewallRules_AllowExpressRouteNAT2_name": {
+            "defaultValue": "AllowExpressRouteNAT2",
+            "type": "String"
+        },
+        "secrets_opsi_p_01_sp_applicationId_name": {
+            "defaultValue": "opsi-p-01-sp-applicationId",
+            "type": "String"
+        },
+        "secrets_vsts_opsi_p_01_sp_objectid_name": {
+            "defaultValue": "vsts-opsi-p-01-sp-objectid",
+            "type": "String"
+        },
+        "secrets_opsi_p_01_sp_CertificatePwd_name": {
+            "defaultValue": "opsi-p-01-sp-CertificatePwd",
+            "type": "String"
+        },
+        "firewallRules_AllowAzurePublicServices_name": {
+            "defaultValue": "AllowAzurePublicServices",
+            "type": "String"
+        },
+        "secrets_opsip01sqlsrvsqlpassword_name": {
+            "defaultValue": "opsip01sqlsrvsqlpassword",
+            "type": "String"
+        },
+        "secrets_vsts_opsi_p_01_sp_Certificate_name": {
+            "defaultValue": "vsts-opsi-p-01-sp-Certificate",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "databases_master_name": {
+            "defaultValue": "master",
+            "type": "String"
+        },
+        "advisors_DropIndex_name_1": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "secrets_opsi_p_01_sp_Certificate_base64_name": {
+            "defaultValue": "opsi-p-01-sp-Certificate-base64",
+            "type": "String"
+        },
+        "secrets_vsts_opsi_p_01_sp_applicationId_name": {
+            "defaultValue": "vsts-opsi-p-01-sp-applicationId",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "secrets_vsts_opsi_p_01_sp_CertificatePwd_name": {
+            "defaultValue": "vsts-opsi-p-01-sp-CertificatePwd",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name_1": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "secrets_vsts_opsi_p_01_sp_Certificate_base64_name": {
+            "defaultValue": "vsts-opsi-p-01-sp-Certificate-base64",
+            "type": "String"
+        },
+        "advisors_DefragmentIndex_name_1": {
+            "defaultValue": "DefragmentIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_2": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name_1": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name_1": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "secrets_opsip01sqlsrv_opsip01sqldb_opsisqldb_reader_name": {
+            "defaultValue": "opsip01sqlsrv-opsip01sqldb-opsisqldb-reader",
+            "type": "String"
+        },
+        "secrets_opsip01sqlsrv_opsip01sqldb_opsisqldb_writer_name": {
+            "defaultValue": "opsip01sqlsrv-opsip01sqldb-opsisqldb-writer",
+            "type": "String"
+        },
+        "secrets_opsip01sqlsrv_opsip01sqldb_opsisqldb_operator_name": {
+            "defaultValue": "opsip01sqlsrv-opsip01sqldb-opsisqldb-operator",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name_1": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "keys_opsi_cbsp_p_01_kv_opsi01p_tdekey_a7e7a607c3ee49fabe7e452b0a7bac66_name": {
+            "defaultValue": "opsi-cbsp-p-01-kv_opsi01p-tdekey_a7e7a607c3ee49fabe7e452b0a7bac66",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-cbsp-p-01-kv'.",
+            "type": "Microsoft.KeyVault/vaults",
+            "name": "[parameters('vaults_opsi_cbsp_p_01_kv_name')]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "tags": {
+                "ContactPhone": "+31617941915",
+                "CIA": "123",
+                "Provider": "CBSP Azure",
+                "Billing code": "NL02330",
+                "CBSPProduct": "Key Vault 1.0",
+                "Owner": "maap.run@nl.abnamro.com",
+                "Business Application CI": "CI0010929",
+                "Billingcode": "NL02330",
+                "ContactMail": "maap.run@nl.abnamro.com",
+                "AppName": "dspe-opsi",
+                "Environment": "Production",
+                "BusinessApplicationCI": "CI0010929"
+            },
+            "scale": null,
+            "properties": {
+                "sku": {
+                    "family": "A",
+                    "name": "premium"
+                },
+                "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                "accessPolicies": [
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "f79e24df-d1b5-4fa6-ab77-c22e37ebaaba",
+                        "permissions": {
+                            "keys": [
+                                "get",
+                                "create",
+                                "update"
+                            ],
+                            "secrets": [
+                                "get",
+                                "set",
+                                "delete"
+                            ],
+                            "certificates": [
+                                "get"
+                            ],
+                            "storage": []
+                        }
+                    },
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "052c0d70-572c-4ced-affd-d9123b446ca9",
+                        "permissions": {
+                            "keys": [
+                                "all"
+                            ],
+                            "secrets": [
+                                "all"
+                            ],
+                            "certificates": [
+                                "all"
+                            ],
+                            "storage": []
+                        }
+                    },
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "ca10c75b-f82c-4b71-be0b-4083d6c17482",
+                        "permissions": {
+                            "keys": [
+                                "get",
+                                "wrapKey",
+                                "unwrapKey"
+                            ],
+                            "secrets": [],
+                            "certificates": [],
+                            "storage": []
+                        }
+                    }
+                ],
+                "enabledForDeployment": false,
+                "enabledForDiskEncryption": false,
+                "enabledForTemplateDeployment": true,
+                "enableSoftDelete": true
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv'.",
+            "type": "Microsoft.KeyVault/vaults",
+            "name": "[parameters('vaults_opsi_p_01_kv_name')]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "tags": {
+                "ContactPhone": "+31617941915",
+                "CIA": "123",
+                "Provider": "CBSP Azure",
+                "Billing code": "NL02330",
+                "CBSPProduct": "Key Vault 1.0",
+                "Owner": "maap.run@nl.abnamro.com",
+                "Business Application CI": "CI0010929",
+                "Billingcode": "NL02330",
+                "ContactMail": "maap.run@nl.abnamro.com",
+                "AppName": "dspe-opsi",
+                "Environment": "Production",
+                "BusinessApplicationCI": "CI0010929"
+            },
+            "scale": null,
+            "properties": {
+                "sku": {
+                    "family": "A",
+                    "name": "Premium"
+                },
+                "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                "accessPolicies": [
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "f79e24df-d1b5-4fa6-ab77-c22e37ebaaba",
+                        "permissions": {
+                            "keys": [
+                                "all"
+                            ],
+                            "secrets": [
+                                "all"
+                            ],
+                            "certificates": [
+                                "all"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "ec8596b4-9465-44eb-9a7b-26785714c779",
+                        "permissions": {
+                            "keys": [
+                                "list",
+                                "get"
+                            ],
+                            "secrets": [
+                                "list",
+                                "get"
+                            ],
+                            "certificates": [
+                                "get",
+                                "list"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "1efdf98b-2bf7-457d-b29a-14abce078a32",
+                        "permissions": {
+                            "keys": [
+                                "list",
+                                "get"
+                            ],
+                            "secrets": [
+                                "list",
+                                "get"
+                            ],
+                            "certificates": [
+                                "get",
+                                "list"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                        "objectId": "ecf0ba7a-bd42-47eb-92c7-cfa9bb789271",
+                        "permissions": {
+                            "keys": [
+                                "list",
+                                "get"
+                            ],
+                            "secrets": [
+                                "list",
+                                "get"
+                            ],
+                            "certificates": [
+                                "get",
+                                "list"
+                            ]
+                        }
+                    }
+                ],
+                "enabledForDeployment": false,
+                "enabledForDiskEncryption": false,
+                "enabledForTemplateDeployment": true,
+                "enableSoftDelete": true
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv'.",
+            "type": "Microsoft.Sql/servers",
+            "kind": "v12.0",
+            "name": "[parameters('servers_opsip01sqlsrv_name')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "westeurope",
+            "identity": {
+                "principalId": "ca10c75b-f82c-4b71-be0b-4083d6c17482",
+                "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                "type": "SystemAssigned"
+            },
+            "tags": {
+                "ContactPhone": "+31617941915",
+                "CIA": "123",
+                "Provider": "CBSP Azure",
+                "Billing code": "NL02330",
+                "CBSPProduct": "SQL 1.1",
+                "Owner": "maap.run@nl.abnamro.com",
+                "Business Application CI": "CI0010929",
+                "Billingcode": "NL02330",
+                "ContactMail": "maap.run@nl.abnamro.com",
+                "AppName": "dspe-opsi",
+                "Environment": "Production",
+                "BusinessApplicationCI": "CI0010929"
+            },
+            "scale": null,
+            "properties": {
+                "administratorLogin": "[concat('sqluser', parameters('servers_opsip01sqlsrv_name'))]",
+                "version": "12.0"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Storage/storageAccounts/opsip01saerkow4ll4tb44'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_GRS",
+                "tier": "Standard"
+            },
+            "kind": "Storage",
+            "name": "[parameters('storageAccounts_opsip01saerkow4ll4tb44_name')]",
+            "apiVersion": "2018-07-01",
+            "location": "westeurope",
+            "identity": {
+                "principalId": "b41c53e9-a57c-4d2e-be33-cca81472575b",
+                "tenantId": "3a15904d-3fd9-4256-a753-beb05cdf0c6d",
+                "type": "SystemAssigned"
+            },
+            "tags": {
+                "ContactPhone": "+31617941915",
+                "CIA": "123",
+                "Provider": "CBSP Azure",
+                "Billing code": "NL02330",
+                "CBSPProduct": "Storage 1.0",
+                "Owner": "maap.run@nl.abnamro.com",
+                "Business Application CI": "CI0010929",
+                "Billingcode": "NL02330",
+                "ContactMail": "maap.run@nl.abnamro.com",
+                "AppName": "dspe-opsi",
+                "Environment": "Production",
+                "BusinessApplicationCI": "CI0010929"
+            },
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-cbsp-p-01-kv/secrets/opsip01sqlsrvsqlpassword'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_cbsp_p_01_kv_name'), '/', parameters('secrets_opsip01sqlsrvsqlpassword_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_cbsp_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsi-p-01-sp-applicationId'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsi_p_01_sp_applicationId_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsi-p-01-sp-Certificate'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsi_p_01_sp_Certificate_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "contentType": "application/x-pkcs12",
+                "attributes": {
+                    "enabled": true,
+                    "nbf": 1542727916,
+                    "exp": 1574264516
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsi-p-01-sp-Certificate-base64'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsi_p_01_sp_Certificate_base64_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsi-p-01-sp-CertificatePwd'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsi_p_01_sp_CertificatePwd_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsi-p-01-sp-objectid'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsi_p_01_sp_objectid_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsi-p-01-sp-Pwd'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsi_p_01_sp_Pwd_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsip01sqlsrv-opsip01sqldb-opsisqldb-operator'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsip01sqlsrv_opsip01sqldb_opsisqldb_operator_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsip01sqlsrv-opsip01sqldb-opsisqldb-reader'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsip01sqlsrv_opsip01sqldb_opsisqldb_reader_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/opsip01sqlsrv-opsip01sqldb-opsisqldb-writer'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_opsip01sqlsrv_opsip01sqldb_opsisqldb_writer_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/vsts-opsi-p-01-sp-applicationId'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_vsts_opsi_p_01_sp_applicationId_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/vsts-opsi-p-01-sp-Certificate'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_vsts_opsi_p_01_sp_Certificate_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "contentType": "application/x-pkcs12",
+                "attributes": {
+                    "enabled": true,
+                    "nbf": 1542727999,
+                    "exp": 1574264599
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/vsts-opsi-p-01-sp-Certificate-base64'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_vsts_opsi_p_01_sp_Certificate_base64_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/vsts-opsi-p-01-sp-CertificatePwd'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_vsts_opsi_p_01_sp_CertificatePwd_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/vsts-opsi-p-01-sp-objectid'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_vsts_opsi_p_01_sp_objectid_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.KeyVault/vaults/opsi-p-01-kv/secrets/vsts-opsi-p-01-sp-Pwd'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_opsi_p_01_kv_name'), '/', parameters('secrets_vsts_opsi_p_01_sp_Pwd_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westeurope",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_opsi_p_01_kv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('advisors_CreateIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('advisors_DropIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('advisors_DbParameterization_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('advisors_DefragmentIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('advisors_ForceLastGoodPlan_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/auditingPolicies",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('auditingPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "fullAuditLogsTableName": "SQLDBAuditLogsOpsip01sqlsrv",
+                "auditLogsTableName": "Opsip01sqlsrv",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "S0",
+                "tier": "Standard"
+            },
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'))]",
+            "apiVersion": "2017-03-01-preview",
+            "location": "westeurope",
+            "tags": {
+                "ContactPhone": "+31617941915",
+                "CIA": "123",
+                "Provider": "CBSP Azure",
+                "Billing code": "NL02330",
+                "CBSPProduct": "SQL 1.1",
+                "Owner": "maap.run@nl.abnamro.com",
+                "Business Application CI": "CI0010929",
+                "Billingcode": "NL02330",
+                "ContactMail": "maap.run@nl.abnamro.com",
+                "AppName": "dspe-opsi",
+                "Environment": "Production",
+                "BusinessApplicationCI": "CI0010929"
+            },
+            "scale": null,
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": 268435456000,
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                "zoneRedundant": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/firewallRules/AllowABNGuestWifi'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('firewallRules_AllowABNGuestWifi_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "87.213.22.0",
+                "endIpAddress": "87.213.22.62"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/firewallRules/AllowAzurePublicServices'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('firewallRules_AllowAzurePublicServices_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "0.0.0.0",
+                "endIpAddress": "0.0.0.0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/firewallRules/AllowExpressRouteNAT1'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('firewallRules_AllowExpressRouteNAT1_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "104.210.234.2",
+                "endIpAddress": "104.210.234.2"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/firewallRules/AllowExpressRouteNAT2'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('firewallRules_AllowExpressRouteNAT2_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "104.210.235.2",
+                "endIpAddress": "104.210.235.2"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/firewallRules/AllowPublicABNSpace'.",
+            "type": "Microsoft.Sql/servers/firewallRules",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('firewallRules_AllowPublicABNSpace_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "startIpAddress": "167.202.0.0",
+                "endIpAddress": "167.202.255.254"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/encryptionProtector/current'.",
+            "type": "Microsoft.Sql/servers/encryptionProtector",
+            "kind": "azurekeyvault",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('encryptionProtector_current_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyName": "opsi-cbsp-p-01-kv_opsi01p-tdekey_a7e7a607c3ee49fabe7e452b0a7bac66",
+                "serverKeyType": "AzureKeyVault"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/keys/opsi-cbsp-p-01-kv_opsi01p-tdekey_a7e7a607c3ee49fabe7e452b0a7bac66'.",
+            "type": "Microsoft.Sql/servers/keys",
+            "kind": "azurekeyvault",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('keys_opsi_cbsp_p_01_kv_opsi01p_tdekey_a7e7a607c3ee49fabe7e452b0a7bac66_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "serverKeyType": "AzureKeyVault",
+                "uri": "https://opsi-cbsp-p-01-kv.vault.azure.net/keys/opsi01p-tdekey/a7e7a607c3ee49fabe7e452b0a7bac66",
+                "thumbprint": "2C51F19392ED8E1BC4ECC88033EF1269B94B4956",
+                "creationDate": "2018-11-21T11:10:51.167Z"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/keys/ServiceManaged'.",
+            "type": "Microsoft.Sql/servers/keys",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('keys_ServiceManaged_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyType": "[parameters('keys_ServiceManaged_name')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/master/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_master_name'), '/', parameters('auditingPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsOpsip01sqlsrvMaster",
+                "auditLogsTableName": "Opsip01sqlsrvMaster",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/master/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_master_name'), '/', parameters('geoBackupPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/master/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_master_name'), '/', parameters('transparentDataEncryption_current_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "status": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('advisors_CreateIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('advisors_DropIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('advisors_DbParameterization_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('advisors_DefragmentIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('advisors_ForceLastGoodPlan_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('auditingPolicies_Default_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsOpsip01sqlsrvOpsip01sqldb",
+                "auditLogsTableName": "Opsip01sqlsrvOpsip01sqldb",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('geoBackupPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/57397a34-5f14-41ca-b4fd-7d7844fd3716/resourceGroups/dspe-opsi-p-rg/providers/Microsoft.Sql/servers/opsip01sqlsrv/databases/opsip01sqldb/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_opsip01sqlsrv_name'), '/', parameters('databases_opsip01sqldb_name'), '/', parameters('transparentDataEncryption_current_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West Europe",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_opsip01sqlsrv_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_opsip01sqlsrv_name'), parameters('databases_opsip01sqldb_name'))]"
+            ]
+        }
+    ]
+}
