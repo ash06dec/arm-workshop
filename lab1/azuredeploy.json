@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountPrefix": {
-            "type": "string",
+            "type": "strng",
             "defaultValue": "richeneystg",
             "maxLength": 11,
             "metadata": {
